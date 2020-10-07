@@ -1,0 +1,30 @@
+A single list element is a node. Nodes are not like arrays which are stored sequentially in memory but likely to be found in different memory segments.
+Pointers reference the elements and lists usually end with NIL element which is None in Python
+Single-linked list points to only the next element in list and double-linked points to the previous also, requiring more space for the extra reference.
+A single-linked list is traversed from head to tail which can be more work going backwards, going over the same elements.
+double-linked lists allow you to travel both directions at the same cost. adding and deleting nodes also require four pointers to be changed instead of two in linked lists.
+
+use ListNode class to create node. class defines object instance with variables data, node's value, and next, reference of next node in list.
+__init_() initializes node with data
+self.data is value stored
+self.next is reference pointer to next node
+has_value() compares a value with node value
+#-----------------------------------#
+class ListNode:  
+    def __init__(self, data):
+        "constructor to initiate this object"
+
+        # store data
+        self.data = data
+
+        # store reference (next item)
+        self.next = None
+        return
+
+    def has_value(self, value):
+        "method to compare the value with the node data"
+        if self.data == value:
+            return True
+        else:
+            return False
+#-----------------------------------#

@@ -1,0 +1,81 @@
+/*Input: candidates = [2,3,6,7], target = 7,
+A solution set is:
+[
+  [7],
+  [2,2,3]
+]
+
+Input: candidates = [2,3,5,6,9], target = 21,
+A solution set is:
+[
+  [9,9,3],
+  [9,6,6],
+  [9,6,3,3],
+  [9,3,3,3,3],
+  [9,2,2,2,3,3],
+  [9,2,2,3,5],
+  [9,2,5,5],	    
+  [9,2,2,2,2,2,2],
+  [6,6,6,3],
+  [6,6,3,3,3],
+  [6,6,2,2,2,3],
+  [6,2,2,2,2,2,2,3],
+  [6,2,2,2,2,2,5],
+  [6,6,5,2,2],
+  [6,6,3,2,2,2],
+  [5,5,5,3,3],
+  [5,5,5,2,2,2],
+  [5,5,3,2,2,2,2],
+  [3,3,3,3,3,3,3],
+  [3,3,3,3,3,2,2,2],
+
+
+]
+
+Input: candidates = [2,3,5], target = 8,
+A solution set is:
+[
+  [2,2,2,2],
+  [2,3,3],
+  [3,5]
+]
+
+is target % nth element present in array? solution is [target % nth element, nth element]
+is any element/candidate in array equal to target? that's a solution.
+if element plus itself continuosly while sum is <= target and sum % target = 0...solution is element
+
+
+
+
+/*Input: candidates = [2,3,6,7], target = 7,
+A solution set is:
+[
+  [7],
+  [2,2,3]
+]
+*/
+
+using System;
+namespace ConsoleApp
+{
+    class ConsoleRun
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine();
+
+            do
+            {
+                while (!Console.KeyAvailable)
+                {
+                }
+            } while (Console.ReadKey(true).Key != ConsoleKey.Escape); // escape to exit 
+        }
+
+        public static int[][] CombinationSum(int[] candidates, int target)
+        {
+            Array.Sort(candidates);
+            int[][] result = new int[][] { 1, 3, 5, 7, 9 };
+        }
+    }
+}

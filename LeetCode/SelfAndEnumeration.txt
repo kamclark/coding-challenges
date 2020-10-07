@@ -1,0 +1,58 @@
+Self Variable
+Use in instantiation to bind object data to another object.
+Passes through template for data and method use without passing own name but just data
+
+#START
+class Restaurant():
+    hasInvestors = True
+    open247 = False
+    drivethru = False
+    
+    def open_branch(self): #wendys is passed into self parameter to keep track of own data
+        if not self.hasInvestors: # if wendys.hasInvestors == false
+            print("Location can not be opened")
+        elif self.hasInvestors:
+            print("Open for business")
+            
+            
+    def order_late(self):
+        if not self.hasInvestors or not self.open247 and not self.drivethru: # if wendys.hasInvestors == false OR (open247 and drivethru == false)
+            print("Order can not be made")
+        else:
+            print("Order please?")
+    
+wendys = Restaurant()
+wendys.open247 = True
+wendys.drivethru = True
+wendys.open_branch()
+wendys.order_late()
+
+#----------------------------#
+
+Enumeration
+Allows you to loop through list and automatically have a counter using enumerate()
+enumerate(iterable_object, start) # params areany iterable object to moved through and starting index that is default of 0
+strings are an array of chars
+returns an enumerate type
+
+#START
+some_names = ['adam', 'barry', 'chris', 'don']  #list of strings
+for counter, value in enumerate(some_names, 2): #counter is iterations and list will begin being KEPT at index of 2 until 5
+	print(counter, value) #prints array index and list value seperately
+						  #having JUST value in for prints tuple directly which is (array index, value)
+#----------------------------#
+
+Two Sum
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Example:
+
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+
+#START
+  
